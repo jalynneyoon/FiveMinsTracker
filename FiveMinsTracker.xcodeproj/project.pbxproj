@@ -13,6 +13,7 @@
 		FC6CEAFB26A04B8000FB3F2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6CEAF926A04B8000FB3F2A /* Main.storyboard */; };
 		FC6CEAFD26A04B8000FB3F2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6CEAFC26A04B8000FB3F2A /* Assets.xcassets */; };
 		FC6CEB0026A04B8000FB3F2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6CEAFE26A04B8000FB3F2A /* LaunchScreen.storyboard */; };
+		FC6CEB0926A07EED00FB3F2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6CEB0826A07EED00FB3F2A /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		FC6CEAFC26A04B8000FB3F2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC6CEAFF26A04B8000FB3F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC6CEB0126A04B8000FB3F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC6CEB0826A07EED00FB3F2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FC80B62D26A2927D0073DCEF /* FiveMinsTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FiveMinsTracker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +59,25 @@
 		FC6CEAF226A04B8000FB3F2A /* FiveMinsTracker */ = {
 			isa = PBXGroup;
 			children = (
+				FC80B62D26A2927D0073DCEF /* FiveMinsTracker.entitlements */,
+				FC6CEB0726A07DE400FB3F2A /* resources */,
 				FC6CEAF326A04B8000FB3F2A /* AppDelegate.swift */,
 				FC6CEAF526A04B8000FB3F2A /* SceneDelegate.swift */,
 				FC6CEAF726A04B8000FB3F2A /* ViewController.swift */,
-				FC6CEAF926A04B8000FB3F2A /* Main.storyboard */,
-				FC6CEAFC26A04B8000FB3F2A /* Assets.xcassets */,
-				FC6CEAFE26A04B8000FB3F2A /* LaunchScreen.storyboard */,
 				FC6CEB0126A04B8000FB3F2A /* Info.plist */,
+				FC6CEB0826A07EED00FB3F2A /* LoginViewController.swift */,
 			);
 			path = FiveMinsTracker;
+			sourceTree = "<group>";
+		};
+		FC6CEB0726A07DE400FB3F2A /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC6CEAFE26A04B8000FB3F2A /* LaunchScreen.storyboard */,
+				FC6CEAF926A04B8000FB3F2A /* Main.storyboard */,
+				FC6CEAFC26A04B8000FB3F2A /* Assets.xcassets */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6CEB0926A07EED00FB3F2A /* LoginViewController.swift in Sources */,
 				FC6CEAF826A04B8000FB3F2A /* ViewController.swift in Sources */,
 				FC6CEAF426A04B8000FB3F2A /* AppDelegate.swift in Sources */,
 				FC6CEAF626A04B8000FB3F2A /* SceneDelegate.swift in Sources */,
@@ -286,6 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FiveMinsTracker/FiveMinsTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N48W337W2F;
 				INFOPLIST_FILE = FiveMinsTracker/Info.plist;
@@ -306,6 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FiveMinsTracker/FiveMinsTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N48W337W2F;
 				INFOPLIST_FILE = FiveMinsTracker/Info.plist;
