@@ -7,9 +7,12 @@
 
 import UIKit
 import KakaoSDKUser
+import AuthenticationServices
 
 class SignUpViewController: UIViewController {
     
+    
+    // MARK: - Kakao SignUp
     @IBAction func KakaoSignUpBtnTouched(_ sender: Any) {
         // 카카오톡 설치 여부 확인
         // 카카오톡 설치되어 있는 경우 카카오톡으로 간편로그인
@@ -53,19 +56,68 @@ class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupProviderAppleSignUpView()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Apple SignUp
+    @IBOutlet weak var appleSignUpStackView : UIStackView!
+    
+    func setupProviderAppleSignUpView(){
+        let btn = ASAuthorizationAppleIDButton(type: .signUp , style: .black)
+        btn.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: .touchUpInside)
+        self.appleSignUpStackView.addArrangedSubview(btn)
     }
-    */
+    
+    @objc
+    func handleAuthorizationAppleIDButtonPress() {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        controller.performRequests()
+    }
+    
+}
 
+
+extension SignUpViewController: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        switch authorization.credential {
+        case let appleIDCredential as ASAuthorizationAppleIDCredential:
+            let userIdentifier = appleIDCredential.user
+            let fullName = appleIDCredential.fullName
+            let email = appleIDCredential.email
+            
+            print("#1: \(userIdentifier)")
+            print("#2: \(String(describing: fullName))")
+            print("#3: \(String(describing: email))")
+        
+        case let passwordCredential as ASPasswordCredential:
+            let userName = passwordCredential.user
+            let password = passwordCredential.password
+            print("#4: \(userName)")
+            print("#5: \(password)")
+
+        default:
+            break
+        }
+        self.performSegue(withIdentifier: "SignUpSuccessSegue", sender: self)
+
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print(error)
+    }
+    
+}
+
+extension SignUpViewController: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
+    }
 }

@@ -7,9 +7,12 @@
 
 import UIKit
 import KakaoSDKUser
+import AuthenticationServices
+
 
 class SignInViewController: UIViewController {
     
+    // MARK: - Kakao SignIn
     @IBAction func KakaoSignInBtnTouched(_ sender: Any) {
         // 카카오톡 설치 여부 확인
         // 카카오톡 설치되어 있는 경우 카카오톡으로 간편로그인
@@ -25,7 +28,7 @@ class SignInViewController: UIViewController {
                     //do something
                     _ = oauthToken
 //                    let accessToken = oauthToken?.accessToken
-                    self.performSegue(withIdentifier: "SignInSucessSegue", sender: self)
+                    self.performSegue(withIdentifier: "SignInSuccessSegue", sender: self)
                 }
             }
         }
@@ -40,9 +43,7 @@ class SignInViewController: UIViewController {
 
                         //do something
                         _ = oauthToken
-                        self.performSegue(withIdentifier: "SignInSucessSegue", sender: self)
-
-                        
+                        self.performSegue(withIdentifier: "SignInSuccessSegue", sender: self)
                     }
                 }
             
@@ -52,19 +53,69 @@ class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupProviderSignInView()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    // MARK: - Apple SignIn
+    @IBOutlet weak var appleSignInStackView : UIStackView!
+    
+    func setupProviderSignInView(){
+        let btn = ASAuthorizationAppleIDButton(type: .signIn, style: .black)
+        btn.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: .touchUpInside)
+        self.appleSignInStackView.addArrangedSubview(btn)
     }
-    */
+    
+    @objc
+    func handleAuthorizationAppleIDButtonPress() {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        controller.performRequests()
+    }
+    
+}
 
+
+extension SignInViewController: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        switch authorization.credential {
+        case let appleIDCredential as ASAuthorizationAppleIDCredential:
+            let userIdentifier = appleIDCredential.user
+            let fullName = appleIDCredential.fullName
+            let email = appleIDCredential.email
+            
+            print("#1: \(userIdentifier)")
+            print("#2: \(String(describing: fullName))")
+            print("#3: \(String(describing: email))")
+        
+        case let passwordCredential as ASPasswordCredential:
+            let userName = passwordCredential.user
+            let password = passwordCredential.password
+            print("#4: \(userName)")
+            print("#5: \(password)")
+
+        default:
+            break
+        }
+        self.performSegue(withIdentifier: "SignInSuccessSegue", sender: self)
+
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print(error)
+    }
+    
+}
+
+extension SignInViewController: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
+    }
 }
