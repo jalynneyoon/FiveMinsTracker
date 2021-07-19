@@ -23,7 +23,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5FM-rV-fn1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIconWithRoundCorner" translatesAutoresizingMaskIntoConstraints="NO" id="5FM-rV-fn1">
                                 <rect key="frame" x="87" y="328" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5FM-rV-fn1" secondAttribute="height" multiplier="1:1" id="NZ5-Wx-rop"/>
@@ -48,7 +48,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AppIcon" width="320" height="320"/>
+        <image name="AppIconWithRoundCorner" width="320" height="320"/>
         <namedColor name="BackgroundColor">
             <color red="0.83099997043609619" green="0.84899997711181641" blue="0.94300001859664917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

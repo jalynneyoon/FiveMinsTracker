@@ -11,13 +11,6 @@ import AuthenticationServices
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var SignUpViewController : UIView!
-    @IBOutlet weak var SignInViewController : UIView!
-    
-    
-    var appleSignInButton: UIStackView!
-
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +19,6 @@ class LoginViewController: UIViewController {
     }
     
   
-    
-//    func setAppleSignInButton() {
-//        let authorizationButton = ASAuthorizationAppleIDButton(type: .signUp, style: .whiteOutline)
-//        authorizationButton.addTarget(self, action: #selector(appleSignInButtonPress), for: .touchUpInside)
-//        self.appleSignInButton.addArrangedSubview(authorizationButton)
-//    }
 
     /*
     // MARK: - Navigation

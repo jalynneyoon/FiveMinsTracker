@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41BB287563AD30D07A10991F /* Pods_FiveMinsTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8DBDCC485CC43EF1C52686 /* Pods_FiveMinsTracker.framework */; };
+		FC520EEE26A536D800C18C4B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC520EED26A536D800C18C4B /* SignUpViewController.swift */; };
+		FC520EF226A541FC00C18C4B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC520EF126A541FC00C18C4B /* SignInViewController.swift */; };
+		FC520EF426A5421200C18C4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC520EF326A5421200C18C4B /* ViewController.swift */; };
 		FC6CEAF426A04B8000FB3F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6CEAF326A04B8000FB3F2A /* AppDelegate.swift */; };
 		FC6CEAF626A04B8000FB3F2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6CEAF526A04B8000FB3F2A /* SceneDelegate.swift */; };
-		FC6CEAF826A04B8000FB3F2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6CEAF726A04B8000FB3F2A /* ViewController.swift */; };
 		FC6CEAFB26A04B8000FB3F2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6CEAF926A04B8000FB3F2A /* Main.storyboard */; };
 		FC6CEAFD26A04B8000FB3F2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6CEAFC26A04B8000FB3F2A /* Assets.xcassets */; };
 		FC6CEB0026A04B8000FB3F2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6CEAFE26A04B8000FB3F2A /* LaunchScreen.storyboard */; };
@@ -17,10 +20,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D8DBDCC485CC43EF1C52686 /* Pods_FiveMinsTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiveMinsTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4892CE3C6A8A5F9EF1F908BE /* Pods-FiveMinsTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveMinsTracker.debug.xcconfig"; path = "Target Support Files/Pods-FiveMinsTracker/Pods-FiveMinsTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		CEE4E48BA3796773940947AC /* Pods-FiveMinsTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveMinsTracker.release.xcconfig"; path = "Target Support Files/Pods-FiveMinsTracker/Pods-FiveMinsTracker.release.xcconfig"; sourceTree = "<group>"; };
+		FC520EED26A536D800C18C4B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = FiveMinsTracker/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
+		FC520EF126A541FC00C18C4B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FC520EF326A5421200C18C4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC6CEAF026A04B8000FB3F2A /* FiveMinsTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiveMinsTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6CEAF326A04B8000FB3F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC6CEAF526A04B8000FB3F2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC6CEAF726A04B8000FB3F2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC6CEAFA26A04B8000FB3F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC6CEAFC26A04B8000FB3F2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC6CEAFF26A04B8000FB3F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,17 +42,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41BB287563AD30D07A10991F /* Pods_FiveMinsTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AD049440BE34253EDE456D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DBDCC485CC43EF1C52686 /* Pods_FiveMinsTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C968BB12613ACEA496F99575 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4892CE3C6A8A5F9EF1F908BE /* Pods-FiveMinsTracker.debug.xcconfig */,
+				CEE4E48BA3796773940947AC /* Pods-FiveMinsTracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC520EEC26A534C300C18C4B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC6CEB0826A07EED00FB3F2A /* LoginViewController.swift */,
+				FC520EED26A536D800C18C4B /* SignUpViewController.swift */,
+				FC520EF126A541FC00C18C4B /* SignInViewController.swift */,
+				FC520EF326A5421200C18C4B /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		FC6CEAE726A04B8000FB3F2A = {
 			isa = PBXGroup;
 			children = (
 				FC6CEAF226A04B8000FB3F2A /* FiveMinsTracker */,
 				FC6CEAF126A04B8000FB3F2A /* Products */,
+				C968BB12613ACEA496F99575 /* Pods */,
+				7AD049440BE34253EDE456D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,12 +99,11 @@
 			isa = PBXGroup;
 			children = (
 				FC80B62D26A2927D0073DCEF /* FiveMinsTracker.entitlements */,
+				FC520EEC26A534C300C18C4B /* ViewControllers */,
 				FC6CEB0726A07DE400FB3F2A /* resources */,
 				FC6CEAF326A04B8000FB3F2A /* AppDelegate.swift */,
 				FC6CEAF526A04B8000FB3F2A /* SceneDelegate.swift */,
-				FC6CEAF726A04B8000FB3F2A /* ViewController.swift */,
 				FC6CEB0126A04B8000FB3F2A /* Info.plist */,
-				FC6CEB0826A07EED00FB3F2A /* LoginViewController.swift */,
 			);
 			path = FiveMinsTracker;
 			sourceTree = "<group>";
@@ -87,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC6CEB0426A04B8000FB3F2A /* Build configuration list for PBXNativeTarget "FiveMinsTracker" */;
 			buildPhases = (
+				4E6E467CAD23E3FC34543C2E /* [CP] Check Pods Manifest.lock */,
 				FC6CEAEC26A04B8000FB3F2A /* Sources */,
 				FC6CEAED26A04B8000FB3F2A /* Frameworks */,
 				FC6CEAEE26A04B8000FB3F2A /* Resources */,
+				930C9F724A18A5196A0A015E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,14 +185,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E6E467CAD23E3FC34543C2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FiveMinsTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		930C9F724A18A5196A0A015E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FiveMinsTracker/Pods-FiveMinsTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FiveMinsTracker/Pods-FiveMinsTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FiveMinsTracker/Pods-FiveMinsTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC6CEAEC26A04B8000FB3F2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC520EF426A5421200C18C4B /* ViewController.swift in Sources */,
 				FC6CEB0926A07EED00FB3F2A /* LoginViewController.swift in Sources */,
-				FC6CEAF826A04B8000FB3F2A /* ViewController.swift in Sources */,
 				FC6CEAF426A04B8000FB3F2A /* AppDelegate.swift in Sources */,
+				FC520EEE26A536D800C18C4B /* SignUpViewController.swift in Sources */,
+				FC520EF226A541FC00C18C4B /* SignInViewController.swift in Sources */,
 				FC6CEAF626A04B8000FB3F2A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +381,7 @@
 		};
 		FC6CEB0526A04B8000FB3F2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4892CE3C6A8A5F9EF1F908BE /* Pods-FiveMinsTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +403,7 @@
 		};
 		FC6CEB0626A04B8000FB3F2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEE4E48BA3796773940947AC /* Pods-FiveMinsTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
