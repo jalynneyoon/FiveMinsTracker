@@ -34,11 +34,25 @@
 				<string>com.googleusercontent.apps.281671439415-eni64091cquhc2n02mvr5vsd1m4257ag</string>
 			</array>
 		</dict>
+		<dict>
+            
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>naverlogin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>naverlogin</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+    
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+        <string>naversearchapp</string>
+        <string>naversearchthirdlogin</string>
 		<string>kakaokompassauth</string>
 		<string>kakaolink</string>
 	</array>

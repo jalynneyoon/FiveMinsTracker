@@ -9,6 +9,8 @@ import UIKit
 import KakaoSDKUser
 import AuthenticationServices
 import GoogleSignIn
+import NaverThirdPartyLogin
+import Alamofire
 
 class SignUpViewController: UIViewController {
     
@@ -75,6 +77,53 @@ class SignUpViewController: UIViewController {
     }
     
     
+    // MARK: - Naver SignUp
+    let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+
+    
+    @IBAction private func naverSignUpButton(_ sender: UIButton) {
+      loginInstance?.delegate = self
+      loginInstance?.requestThirdPartyLogin()
+    }
+    
+    @IBAction private func naverSignOut(_ sender: UIButton) {
+    loginInstance?.delegate = self
+    loginInstance?.requestDeleteToken()
+        
+    }
+    
+    private func getNaverInfo() {
+        guard let isValidAccessToken = loginInstance?.isValidAccessTokenExpireTimeNow() else { return }
+        
+        if !isValidAccessToken {
+            return
+        }
+        
+        guard let tokenType = loginInstance?.tokenType else { return }
+        guard let accessToken = loginInstance?.accessToken else { return }
+        let urlStr = "https://openapi.naver.com/v1/nid/me"
+        let url = URL(string: urlStr)!
+        
+        let authorization = "\(tokenType) \(accessToken)"
+        
+        let req = AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": authorization])
+        
+        req.responseJSON { response in
+            guard let result = response.value as? [String: Any] else { return }
+            guard let object = result["response"] as? [String: Any] else { return }
+            guard let name = object["name"] as? String else { return }
+            guard let email = object["email"] as? String else { return }
+            guard let nickname = object["nickname"] as? String else { return }
+            
+            print("username: \(name)")
+            print("email: \(email)")
+            print("nickname: \(nickname)")
+            
+        }
+        self.performSegue(withIdentifier: "SignUpSuccessSegue", sender: self)
+    }
+    
+    
     
     // MARK: - Apple SignUp
     @IBOutlet weak var appleSignUpStackView : UIStackView!
@@ -135,3 +184,37 @@ extension SignUpViewController: ASAuthorizationControllerPresentationContextProv
         return self.view.window!
     }
 }
+
+
+
+//naver signUp extenstions
+
+
+extension SignUpViewController: NaverThirdPartyLoginConnectionDelegate {
+  // 로그인 버튼을 눌렀을 경우 열게 될 브라우저
+  func oauth20ConnectionDidOpenInAppBrowser(forOAuth request: URLRequest!) {
+
+  }
+  
+  // 로그인에 성공했을 경우 호출
+  func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
+    print("[Success] : Success Naver Login")
+    getNaverInfo()
+  }
+  
+  // 접근 토큰 갱신
+  func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
+    
+  }
+  
+  // 로그아웃 할 경우 호출(토큰 삭제)
+  func oauth20ConnectionDidFinishDeleteToken() {
+    loginInstance?.requestDeleteToken()
+  }
+  
+  // 모든 Error
+  func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
+    print(error.localizedDescription)
+  }
+}
+

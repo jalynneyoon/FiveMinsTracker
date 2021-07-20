@@ -6,6 +6,7 @@ target 'FiveMinsTracker' do
   use_frameworks!
 pod 'KakaoSDK'
 pod 'GoogleSignIn'
+pod 'naveridlogin-sdk-ios'
 
   # Pods for FiveMinsTracker
 

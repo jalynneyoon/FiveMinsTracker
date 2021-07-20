@@ -70,9 +70,12 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yws-3f-JuK">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
-                                        <state key="normal" title="네이버">
+                                        <state key="normal" title="네이버로 로그인">
                                             <color key="titleColor" name="TextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="naverSignInButton:" destination="oAM-6c-XX1" eventType="touchUpInside" id="qRF-DQ-bbe"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HC5-dA-STD">
                                         <rect key="frame" x="0.0" y="56" width="382" height="65"/>
@@ -102,6 +105,14 @@
                                     <constraint firstItem="0M7-86-L7a" firstAttribute="height" secondItem="qbM-fn-LvO" secondAttribute="height" multiplier="2.04444" id="Z7F-Mm-2bp"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6O-EI-uJU">
+                                <rect key="frame" x="132" y="595" width="158" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="네이버 로그아웃(디버깅용)"/>
+                                <connections>
+                                    <action selector="naverSignOut:" destination="oAM-6c-XX1" eventType="touchUpInside" id="goH-ca-Jc3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y0b-lk-Wmg"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -170,13 +181,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="9Uj-r1-Q8t">
-                                <rect key="frame" x="57" y="315" width="305" height="246"/>
+                                <rect key="frame" x="55" y="372" width="305" height="246"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydn-Uu-d9V">
                                         <rect key="frame" x="0.0" y="0.0" width="305" height="30"/>
-                                        <state key="normal" title="네이버">
+                                        <state key="normal" title="네이버로 시작하기">
                                             <color key="titleColor" name="TextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="naverSignUpButton:" destination="pOy-Vd-Sic" eventType="touchUpInside" id="E7l-4K-ODk"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tZ3-8K-9P2">
                                         <rect key="frame" x="0.0" y="56" width="305" height="63"/>
@@ -204,6 +218,14 @@
                                     <constraint firstItem="tZ3-8K-9P2" firstAttribute="height" secondItem="SUT-Bg-GYN" secondAttribute="height" multiplier="1.4" id="sHs-Wk-WEI"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqm-eF-Rh0">
+                                <rect key="frame" x="127" y="642" width="158" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="네이버 로그아웃(디버깅용)"/>
+                                <connections>
+                                    <action selector="naverSignOut:" destination="pOy-Vd-Sic" eventType="touchUpInside" id="wdI-TA-dy5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dKo-bO-Eyw"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
@@ -220,7 +242,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8Jq-Tv-YTI"/>
+        <segue reference="asv-Se-W2r"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LoginWithKakao" width="300" height="45"/>
