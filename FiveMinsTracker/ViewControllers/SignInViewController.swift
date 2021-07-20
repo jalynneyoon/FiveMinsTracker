@@ -8,6 +8,7 @@
 import UIKit
 import KakaoSDKUser
 import AuthenticationServices
+import GoogleSignIn
 
 
 class SignInViewController: UIViewController {
@@ -58,6 +59,18 @@ class SignInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    //MARK: - Google SignIn
+    @IBAction func googlesignIn(sender: Any) {
+        let signInConfig = GIDConfiguration.init(clientID: "281671439415-eni64091cquhc2n02mvr5vsd1m4257ag.apps.googleusercontent.com")
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
+            guard error == nil else { return }
+            
+            // If sign in succeeded, display the app's main content View.
+            self.performSegue(withIdentifier: "SignInSuccessSegue", sender: self)
+
+        }
+    }
     
     
     // MARK: - Apple SignIn

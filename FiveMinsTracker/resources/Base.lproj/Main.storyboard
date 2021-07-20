@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="STg-mm-Ewn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -65,25 +66,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="dxN-qe-7I7">
-                                <rect key="frame" x="57" y="303" width="315" height="238"/>
+                                <rect key="frame" x="20" y="277" width="382" height="310"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0M7-86-L7a">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
-                                        <state key="normal" title="구글">
-                                            <color key="titleColor" name="TextColor"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yws-3f-JuK">
-                                        <rect key="frame" x="0.0" y="56" width="315" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <state key="normal" title="네이버">
                                             <color key="titleColor" name="TextColor"/>
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HC5-dA-STD">
-                                        <rect key="frame" x="0.0" y="112" width="315" height="55"/>
+                                        <rect key="frame" x="0.0" y="56" width="382" height="65"/>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0M7-86-L7a">
+                                        <rect key="frame" x="0.0" y="147" width="382" height="92"/>
+                                        <state key="normal" image="SignInGoogle">
+                                            <color key="titleColor" name="TextColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="10"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="googlesignInSender:" destination="oAM-6c-XX1" eventType="touchUpInside" id="AgH-i4-7S5"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbM-fn-LvO">
-                                        <rect key="frame" x="0.0" y="193" width="315" height="45"/>
+                                        <rect key="frame" x="0.0" y="265" width="382" height="45"/>
                                         <state key="normal" image="LoginWithKakao">
                                             <color key="titleColor" name="TextColor"/>
                                         </state>
@@ -93,7 +98,8 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="HC5-dA-STD" firstAttribute="height" secondItem="qbM-fn-LvO" secondAttribute="height" multiplier="1.22222" id="JPB-Nb-PB9"/>
+                                    <constraint firstItem="HC5-dA-STD" firstAttribute="height" secondItem="qbM-fn-LvO" secondAttribute="height" multiplier="1.44444" id="6xh-dI-0ji"/>
+                                    <constraint firstItem="0M7-86-L7a" firstAttribute="height" secondItem="qbM-fn-LvO" secondAttribute="height" multiplier="2.04444" id="Z7F-Mm-2bp"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -166,21 +172,24 @@
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="9Uj-r1-Q8t">
                                 <rect key="frame" x="57" y="315" width="305" height="246"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU9-19-sfl">
-                                        <rect key="frame" x="0.0" y="0.0" width="305" height="30"/>
-                                        <state key="normal" title="구글">
-                                            <color key="titleColor" name="TextColor"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydn-Uu-d9V">
-                                        <rect key="frame" x="0.0" y="56" width="305" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="30"/>
                                         <state key="normal" title="네이버">
                                             <color key="titleColor" name="TextColor"/>
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tZ3-8K-9P2">
-                                        <rect key="frame" x="0.0" y="112" width="305" height="63"/>
+                                        <rect key="frame" x="0.0" y="56" width="305" height="63"/>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU9-19-sfl">
+                                        <rect key="frame" x="0.0" y="145" width="305" height="30"/>
+                                        <state key="normal" title="구글">
+                                            <color key="titleColor" name="TextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="googlesignUpWithSender:" destination="pOy-Vd-Sic" eventType="touchUpInside" id="hJA-i8-rD7"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUT-Bg-GYN">
                                         <rect key="frame" x="0.0" y="201" width="305" height="45"/>
                                         <state key="normal" image="StartWithKakao">
@@ -211,10 +220,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="asv-Se-W2r"/>
+        <segue reference="8Jq-Tv-YTI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LoginWithKakao" width="300" height="45"/>
+        <image name="SignInGoogle" width="382" height="92"/>
         <image name="StartWithKakao" width="300" height="45"/>
         <namedColor name="BackgroundColor">
             <color red="0.83099997043609619" green="0.84899997711181641" blue="0.94300001859664917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
