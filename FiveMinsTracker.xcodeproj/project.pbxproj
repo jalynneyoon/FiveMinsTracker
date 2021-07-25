@@ -10,13 +10,14 @@
 		41BB287563AD30D07A10991F /* Pods_FiveMinsTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8DBDCC485CC43EF1C52686 /* Pods_FiveMinsTracker.framework */; };
 		FC520EEE26A536D800C18C4B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC520EED26A536D800C18C4B /* SignUpViewController.swift */; };
 		FC520EF226A541FC00C18C4B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC520EF126A541FC00C18C4B /* SignInViewController.swift */; };
-		FC520EF426A5421200C18C4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC520EF326A5421200C18C4B /* ViewController.swift */; };
 		FC6CEAF426A04B8000FB3F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6CEAF326A04B8000FB3F2A /* AppDelegate.swift */; };
 		FC6CEAF626A04B8000FB3F2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6CEAF526A04B8000FB3F2A /* SceneDelegate.swift */; };
 		FC6CEAFB26A04B8000FB3F2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6CEAF926A04B8000FB3F2A /* Main.storyboard */; };
 		FC6CEAFD26A04B8000FB3F2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6CEAFC26A04B8000FB3F2A /* Assets.xcassets */; };
 		FC6CEB0026A04B8000FB3F2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6CEAFE26A04B8000FB3F2A /* LaunchScreen.storyboard */; };
 		FC6CEB0926A07EED00FB3F2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6CEB0826A07EED00FB3F2A /* LoginViewController.swift */; };
+		FC910D7026AACF5200886642 /* ManageHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D6F26AACF5200886642 /* ManageHabitViewController.swift */; };
+		FC910D7226AAD24900886642 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7126AAD24900886642 /* HabitTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,6 @@
 		CEE4E48BA3796773940947AC /* Pods-FiveMinsTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveMinsTracker.release.xcconfig"; path = "Target Support Files/Pods-FiveMinsTracker/Pods-FiveMinsTracker.release.xcconfig"; sourceTree = "<group>"; };
 		FC520EED26A536D800C18C4B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = FiveMinsTracker/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		FC520EF126A541FC00C18C4B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		FC520EF326A5421200C18C4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FC6CEAF026A04B8000FB3F2A /* FiveMinsTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiveMinsTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6CEAF326A04B8000FB3F2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC6CEAF526A04B8000FB3F2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +35,8 @@
 		FC6CEB0126A04B8000FB3F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6CEB0826A07EED00FB3F2A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FC80B62D26A2927D0073DCEF /* FiveMinsTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FiveMinsTracker.entitlements; sourceTree = "<group>"; };
+		FC910D6F26AACF5200886642 /* ManageHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManageHabitViewController.swift; path = FiveMinsTracker/ViewControllers/ManageHabitViewController.swift; sourceTree = SOURCE_ROOT; };
+		FC910D7126AAD24900886642 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +71,11 @@
 		FC520EEC26A534C300C18C4B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC910D6F26AACF5200886642 /* ManageHabitViewController.swift */,
+				FC910D7126AAD24900886642 /* HabitTableViewCell.swift */,
 				FC6CEB0826A07EED00FB3F2A /* LoginViewController.swift */,
 				FC520EED26A536D800C18C4B /* SignUpViewController.swift */,
 				FC520EF126A541FC00C18C4B /* SignInViewController.swift */,
-				FC520EF326A5421200C18C4B /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -232,11 +235,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC520EF426A5421200C18C4B /* ViewController.swift in Sources */,
+				FC910D7026AACF5200886642 /* ManageHabitViewController.swift in Sources */,
 				FC6CEB0926A07EED00FB3F2A /* LoginViewController.swift in Sources */,
 				FC6CEAF426A04B8000FB3F2A /* AppDelegate.swift in Sources */,
 				FC520EEE26A536D800C18C4B /* SignUpViewController.swift in Sources */,
 				FC520EF226A541FC00C18C4B /* SignInViewController.swift in Sources */,
+				FC910D7226AAD24900886642 /* HabitTableViewCell.swift in Sources */,
 				FC6CEAF626A04B8000FB3F2A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
