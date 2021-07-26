@@ -9,11 +9,11 @@ import UIKit
 
 class ManageHabitViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tableview : UITableView!
+    @IBOutlet weak var tableView : UITableView!
 
     let dummy: [String] = ["수학문제풀기", "아침조깅하기", "독서"]
 
-    
+    // tableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dummy.count
@@ -34,20 +34,24 @@ class ManageHabitViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableview.delegate = self
-        tableview.dataSource = self
-        tableview.separatorStyle = .none
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
         
 
         // Do any additional setup after loading the view.
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -55,6 +59,6 @@ class ManageHabitViewController: UIViewController, UITableViewDelegate, UITableV
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
