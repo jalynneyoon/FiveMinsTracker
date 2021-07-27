@@ -19,6 +19,7 @@
 		FC910D7026AACF5200886642 /* ManageHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D6F26AACF5200886642 /* ManageHabitViewController.swift */; };
 		FC910D7226AAD24900886642 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7126AAD24900886642 /* HabitTableViewCell.swift */; };
 		FC910D7426AE7BDF00886642 /* EditHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7326AE7BDF00886642 /* EditHabitViewController.swift */; };
+		FC910D7626AFBDB500886642 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7526AFBDB500886642 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		FC910D6F26AACF5200886642 /* ManageHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManageHabitViewController.swift; path = FiveMinsTracker/ViewControllers/ManageHabitViewController.swift; sourceTree = SOURCE_ROOT; };
 		FC910D7126AAD24900886642 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		FC910D7326AE7BDF00886642 /* EditHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitViewController.swift; sourceTree = "<group>"; };
+		FC910D7526AFBDB500886642 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerViewController.swift; path = FiveMinsTracker/ViewControllers/TimerViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				FC520EED26A536D800C18C4B /* SignUpViewController.swift */,
 				FC520EF126A541FC00C18C4B /* SignInViewController.swift */,
 				FC910D7326AE7BDF00886642 /* EditHabitViewController.swift */,
+				FC910D7526AFBDB500886642 /* TimerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC910D7026AACF5200886642 /* ManageHabitViewController.swift in Sources */,
+				FC910D7626AFBDB500886642 /* TimerViewController.swift in Sources */,
 				FC6CEB0926A07EED00FB3F2A /* LoginViewController.swift in Sources */,
 				FC6CEAF426A04B8000FB3F2A /* AppDelegate.swift in Sources */,
 				FC520EEE26A536D800C18C4B /* SignUpViewController.swift in Sources */,

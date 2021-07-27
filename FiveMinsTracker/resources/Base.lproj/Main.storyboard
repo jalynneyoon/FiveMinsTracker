@@ -401,11 +401,28 @@
                     <navigationItem key="navigationItem" id="oBQ-q1-FZo"/>
                     <connections>
                         <outlet property="tableView" destination="yDe-xT-gMe" id="YhL-kN-hhG"/>
+                        <segue destination="LJ4-JP-gR3" kind="show" identifier="TimerSegue" id="Hzk-7r-MQc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUs-te-hzM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4658" y="-1"/>
+        </scene>
+        <!--TimerViewController-->
+        <scene sceneID="Gli-wC-ZNo">
+            <objects>
+                <viewController title="TimerViewController" id="LJ4-JP-gR3" customClass="TimerViewController" customModule="FiveMinsTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sG1-RI-GtW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="heX-3p-r5Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z5J-Z4-S5v"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXQ-lg-Tza" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5423" y="-1"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -109,6 +109,13 @@ class EditHabitViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 3 {
+            performSegue(withIdentifier: "TimerSegue", sender: self)
+        }
+    }
+    
 
     /*
     // MARK: - Navigation
