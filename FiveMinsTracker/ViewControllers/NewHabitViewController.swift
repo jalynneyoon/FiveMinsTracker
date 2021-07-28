@@ -1,13 +1,16 @@
 //
-//  ViewController.swift
+//  NewHabitViewController.swift
 //  FiveMinsTracker
 //
-//  Created by Johyeon Yoon on 2021/07/19.
+//  Created by Johyeon Yoon on 2021/07/27.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class NewHabitViewController: UIViewController {
+    
+    // 새로운 습관 추가눌러서 습관이름/ 체크리스트 만들기/ 5분 내 할 수 있는 일 적기/소셜 공개여부(토클스위치)/알람기능
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
