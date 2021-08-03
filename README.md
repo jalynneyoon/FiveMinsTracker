@@ -19,37 +19,43 @@ PostgreSQL을 사용
 
 ###### Habits
 
-| *<u>habit_id</u>* | habit_name | alarm_time | public |
-| ----------------- | ---------- | ---------- | ------ |
-| `Int`             | `String`   | `Date`     | `Bool` |
+| *<u>habit_id</u>* | habit_name | alarm_time | public | user_id |
+| ----------------- | ---------- | ---------- | ------ | ------- |
+| `Int`             | `String`   | `Date`     | `Bool` | `Int`   |
 
 ###### CheckLists
 
-| *<u>checklist_id</u>* | checklist_name | is_checked |
-| --------------------- | -------------- | ---------- |
-| `Int`                 | `String`       | `Bool`     |
+| *<u>checklist_id</u>* | checklist_name | is_checked | habit_id |
+| --------------------- | -------------- | ---------- | -------- |
+| `Int`                 | `String`       | `Bool`     | `Int`    |
 
 ###### DoneLists
 
-| *<u>done_date</u>* | short_description |
-| ------------------ | ----------------- |
-| `Date`             | `String`          |
+| *<u>done_date</u>* | short_description | habit_id |
+| ------------------ | ----------------- | -------- |
+| `Date`             | `String`          | `Int`    |
 
 ###### Likes
 
-| *<u>likes_id</u>* | habit_id |
-| ----------------- | -------- |
-| `Int`             | `Int`    |
+| *<u>likes_id</u>* | habit_id | User_id |
+| ----------------- | -------- | ------- |
+| `Int`             | `Int`    | `Int`   |
+
+
+### 
 
 ### Relationship
 
-###### `User` do `Habits`
+###### do : `User` do `Habits`
 
-###### `Habits` have  `DoneList`
+###### report : `Habits` report  `DoneList`
 
-###### `Habits` have  `CheckList`
+###### have: `Habits` have  `CheckList`
 
-###### `Habits` have  `Likes`
+###### likes : `User` likes  `Habits`
 
-###### `Users` have  `Likes`
 
+
+## Server
+
+`Vapor`와 `Heroku` 사용
