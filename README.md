@@ -31,9 +31,9 @@ PostgreSQL을 사용
 
 ###### DoneLists
 
-| *<u>done_date</u>* | short_description | habit_id |
-| ------------------ | ----------------- | -------- |
-| `Date`             | `String`          | `Int`    |
+| *<u>donelist_id</u>* |  done_date         | short_description | habit_id |
+| -------------------- | ------------------ | ----------------- | -------- |
+| `Int`                | `Date`             | `String`          | `Int`    |
 
 ###### Likes
 
