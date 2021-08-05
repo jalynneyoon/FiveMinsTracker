@@ -21,6 +21,11 @@
 		FC910D7426AE7BDF00886642 /* EditHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7326AE7BDF00886642 /* EditHabitViewController.swift */; };
 		FC910D7626AFBDB500886642 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7526AFBDB500886642 /* TimerViewController.swift */; };
 		FC910D7826AFC38A00886642 /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7726AFC38A00886642 /* NewHabitViewController.swift */; };
+		FCF745CD26BB7636004B5BBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF745CC26BB7636004B5BBF /* User.swift */; };
+		FCF745CF26BB7858004B5BBF /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF745CE26BB7858004B5BBF /* Habit.swift */; };
+		FCF745D126BB7A0E004B5BBF /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF745D026BB7A0E004B5BBF /* Checklist.swift */; };
+		FCF745D326BB7A80004B5BBF /* Donelist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF745D226BB7A80004B5BBF /* Donelist.swift */; };
+		FCF745D526BB7B4D004B5BBF /* Likes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF745D426BB7B4D004B5BBF /* Likes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		FC910D7326AE7BDF00886642 /* EditHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitViewController.swift; sourceTree = "<group>"; };
 		FC910D7526AFBDB500886642 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerViewController.swift; path = FiveMinsTracker/ViewControllers/TimerViewController.swift; sourceTree = SOURCE_ROOT; };
 		FC910D7726AFC38A00886642 /* NewHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
+		FCF745CC26BB7636004B5BBF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FCF745CE26BB7858004B5BBF /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		FCF745D026BB7A0E004B5BBF /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
+		FCF745D226BB7A80004B5BBF /* Donelist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donelist.swift; sourceTree = "<group>"; };
+		FCF745D426BB7B4D004B5BBF /* Likes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Likes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				FC80B62D26A2927D0073DCEF /* FiveMinsTracker.entitlements */,
+				FCF745CB26BB7615004B5BBF /* Models */,
 				FC520EEC26A534C300C18C4B /* ViewControllers */,
 				FC6CEB0726A07DE400FB3F2A /* resources */,
 				FC6CEAF326A04B8000FB3F2A /* AppDelegate.swift */,
@@ -128,6 +139,18 @@
 				FC6CEAFC26A04B8000FB3F2A /* Assets.xcassets */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		FCF745CB26BB7615004B5BBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCF745CC26BB7636004B5BBF /* User.swift */,
+				FCF745CE26BB7858004B5BBF /* Habit.swift */,
+				FCF745D026BB7A0E004B5BBF /* Checklist.swift */,
+				FCF745D226BB7A80004B5BBF /* Donelist.swift */,
+				FCF745D426BB7B4D004B5BBF /* Likes.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,13 +270,18 @@
 				FC910D7026AACF5200886642 /* ManageHabitViewController.swift in Sources */,
 				FC910D7626AFBDB500886642 /* TimerViewController.swift in Sources */,
 				FC6CEB0926A07EED00FB3F2A /* LoginViewController.swift in Sources */,
+				FCF745D326BB7A80004B5BBF /* Donelist.swift in Sources */,
+				FCF745D526BB7B4D004B5BBF /* Likes.swift in Sources */,
 				FC6CEAF426A04B8000FB3F2A /* AppDelegate.swift in Sources */,
 				FC910D7826AFC38A00886642 /* NewHabitViewController.swift in Sources */,
 				FC520EEE26A536D800C18C4B /* SignUpViewController.swift in Sources */,
+				FCF745CF26BB7858004B5BBF /* Habit.swift in Sources */,
 				FC520EF226A541FC00C18C4B /* SignInViewController.swift in Sources */,
 				FC910D7426AE7BDF00886642 /* EditHabitViewController.swift in Sources */,
 				FC910D7226AAD24900886642 /* HabitTableViewCell.swift in Sources */,
 				FC6CEAF626A04B8000FB3F2A /* SceneDelegate.swift in Sources */,
+				FCF745CD26BB7636004B5BBF /* User.swift in Sources */,
+				FCF745D126BB7A0E004B5BBF /* Checklist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
