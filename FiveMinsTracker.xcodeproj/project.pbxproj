@@ -10,6 +10,8 @@
 		41BB287563AD30D07A10991F /* Pods_FiveMinsTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8DBDCC485CC43EF1C52686 /* Pods_FiveMinsTracker.framework */; };
 		FC00A41526C684CC000FEE94 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC00A41426C684CC000FEE94 /* HttpClient.swift */; };
 		FC00A41826C6878D000FEE94 /* FiveMinsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC00A41726C6878D000FEE94 /* FiveMinsRepository.swift */; };
+		FC3F86EA26CCE9F600EA461D /* ManageHabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F86E926CCE9F600EA461D /* ManageHabitViewModel.swift */; };
+		FC3F86EC26CCF58D00EA461D /* ShowDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F86EB26CCF58D00EA461D /* ShowDetailViewModel.swift */; };
 		FC520EEE26A536D800C18C4B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC520EED26A536D800C18C4B /* SignUpViewController.swift */; };
 		FC520EF226A541FC00C18C4B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC520EF126A541FC00C18C4B /* SignInViewController.swift */; };
 		FC6CEAF426A04B8000FB3F2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6CEAF326A04B8000FB3F2A /* AppDelegate.swift */; };
@@ -20,7 +22,7 @@
 		FC6CEB0926A07EED00FB3F2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6CEB0826A07EED00FB3F2A /* LoginViewController.swift */; };
 		FC910D7026AACF5200886642 /* ManageHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D6F26AACF5200886642 /* ManageHabitViewController.swift */; };
 		FC910D7226AAD24900886642 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7126AAD24900886642 /* HabitTableViewCell.swift */; };
-		FC910D7426AE7BDF00886642 /* EditHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7326AE7BDF00886642 /* EditHabitViewController.swift */; };
+		FC910D7426AE7BDF00886642 /* ShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7326AE7BDF00886642 /* ShowDetailViewController.swift */; };
 		FC910D7626AFBDB500886642 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7526AFBDB500886642 /* TimerViewController.swift */; };
 		FC910D7826AFC38A00886642 /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC910D7726AFC38A00886642 /* NewHabitViewController.swift */; };
 		FCF745CD26BB7636004B5BBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF745CC26BB7636004B5BBF /* User.swift */; };
@@ -36,6 +38,8 @@
 		CEE4E48BA3796773940947AC /* Pods-FiveMinsTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiveMinsTracker.release.xcconfig"; path = "Target Support Files/Pods-FiveMinsTracker/Pods-FiveMinsTracker.release.xcconfig"; sourceTree = "<group>"; };
 		FC00A41426C684CC000FEE94 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		FC00A41726C6878D000FEE94 /* FiveMinsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveMinsRepository.swift; sourceTree = "<group>"; };
+		FC3F86E926CCE9F600EA461D /* ManageHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageHabitViewModel.swift; sourceTree = "<group>"; };
+		FC3F86EB26CCF58D00EA461D /* ShowDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailViewModel.swift; sourceTree = "<group>"; };
 		FC520EED26A536D800C18C4B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = FiveMinsTracker/ViewControllers/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		FC520EF126A541FC00C18C4B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FC6CEAF026A04B8000FB3F2A /* FiveMinsTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiveMinsTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +53,7 @@
 		FC80B62D26A2927D0073DCEF /* FiveMinsTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FiveMinsTracker.entitlements; sourceTree = "<group>"; };
 		FC910D6F26AACF5200886642 /* ManageHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManageHabitViewController.swift; path = FiveMinsTracker/ViewControllers/ManageHabitViewController.swift; sourceTree = SOURCE_ROOT; };
 		FC910D7126AAD24900886642 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
-		FC910D7326AE7BDF00886642 /* EditHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitViewController.swift; sourceTree = "<group>"; };
+		FC910D7326AE7BDF00886642 /* ShowDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailViewController.swift; sourceTree = "<group>"; };
 		FC910D7526AFBDB500886642 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerViewController.swift; path = FiveMinsTracker/ViewControllers/TimerViewController.swift; sourceTree = SOURCE_ROOT; };
 		FC910D7726AFC38A00886642 /* NewHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
 		FCF745CC26BB7636004B5BBF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 			path = repositories;
 			sourceTree = "<group>";
 		};
+		FC00A41926C6A0BD000FEE94 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				FC3F86E926CCE9F600EA461D /* ManageHabitViewModel.swift */,
+				FC3F86EB26CCF58D00EA461D /* ShowDetailViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
 		FC520EEC26A534C300C18C4B /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +125,7 @@
 				FC6CEB0826A07EED00FB3F2A /* LoginViewController.swift */,
 				FC520EED26A536D800C18C4B /* SignUpViewController.swift */,
 				FC520EF126A541FC00C18C4B /* SignInViewController.swift */,
-				FC910D7326AE7BDF00886642 /* EditHabitViewController.swift */,
+				FC910D7326AE7BDF00886642 /* ShowDetailViewController.swift */,
 				FC910D7526AFBDB500886642 /* TimerViewController.swift */,
 				FC910D7726AFC38A00886642 /* NewHabitViewController.swift */,
 			);
@@ -140,11 +153,12 @@
 		FC6CEAF226A04B8000FB3F2A /* FiveMinsTracker */ = {
 			isa = PBXGroup;
 			children = (
+				FC80B62D26A2927D0073DCEF /* FiveMinsTracker.entitlements */,
+				FC520EEC26A534C300C18C4B /* viewControllers */,
+				FC00A41926C6A0BD000FEE94 /* viewmodels */,
 				FC00A41626C6875D000FEE94 /* repositories */,
 				FC00A41326C684A0000FEE94 /* network */,
-				FC80B62D26A2927D0073DCEF /* FiveMinsTracker.entitlements */,
 				FCF745CB26BB7615004B5BBF /* models */,
-				FC520EEC26A534C300C18C4B /* viewControllers */,
 				FC6CEB0726A07DE400FB3F2A /* resources */,
 				FC6CEAF326A04B8000FB3F2A /* AppDelegate.swift */,
 				FC6CEAF526A04B8000FB3F2A /* SceneDelegate.swift */,
@@ -300,11 +314,13 @@
 				FCF745CF26BB7858004B5BBF /* Habit.swift in Sources */,
 				FC520EF226A541FC00C18C4B /* SignInViewController.swift in Sources */,
 				FC00A41526C684CC000FEE94 /* HttpClient.swift in Sources */,
-				FC910D7426AE7BDF00886642 /* EditHabitViewController.swift in Sources */,
+				FC910D7426AE7BDF00886642 /* ShowDetailViewController.swift in Sources */,
 				FC910D7226AAD24900886642 /* HabitTableViewCell.swift in Sources */,
+				FC3F86EC26CCF58D00EA461D /* ShowDetailViewModel.swift in Sources */,
 				FC6CEAF626A04B8000FB3F2A /* SceneDelegate.swift in Sources */,
 				FCF745CD26BB7636004B5BBF /* User.swift in Sources */,
 				FC00A41826C6878D000FEE94 /* FiveMinsRepository.swift in Sources */,
+				FC3F86EA26CCE9F600EA461D /* ManageHabitViewModel.swift in Sources */,
 				FCF745D126BB7A0E004B5BBF /* Checklist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
