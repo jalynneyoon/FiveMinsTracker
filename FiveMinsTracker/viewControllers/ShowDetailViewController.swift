@@ -7,9 +7,9 @@
 
 import UIKit
 
-class EditHabitViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ShowDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
+    @IBOutlet var viewModel : ShowDetailViewModel!
     //  습관편집에서 제목/타이머시작/체크리스트지우기/습관편집 및 삭제
 
     @IBOutlet weak var tableView : UITableView!
@@ -20,22 +20,6 @@ class EditHabitViewController: UIViewController, UITableViewDelegate, UITableVie
         "5분 동안 할일",
         "5분 타이머",
         "습관 관리"
-    ]
-    var habitName : [String] = [
-        "독서하기" // override func prepare(for segue: UIStoryboardSegue, sender: Any?에서 가져오기
-    ]
-    
-    var checkList : [String] = [
-        "총균쇠 마저 읽고 독후감쓰기",
-        "아침에 자기계발서 2쪽 읽기",
-        "백년동안의 고독 읽기"
-    ]
-    
-    var todoInFiveMins : [String] = [
-        "카페로 나가기",
-        "이북 집어들기",
-        "책 집어들고 안락의자로 가기",
-        "독서노트 다시 읽어보기"
     ]
     
     let manageCurrentHabit : [String] = [
@@ -59,9 +43,9 @@ class EditHabitViewController: UIViewController, UITableViewDelegate, UITableVie
         case 0:     // 습관이름
             return 1
         case 1:     //체크리스트
-            return checkList.count
+            return viewModel.countNumOfChecklist()
         case 2:     // 5분 동안 할 일
-            return todoInFiveMins.count
+            return viewModel.countNumOfFiveMinsTodo()
         case 3:     // 5분 타이머
             return 1
         case 4:     // 습관관리(습관삭제, 습관편집하기)
@@ -76,13 +60,13 @@ class EditHabitViewController: UIViewController, UITableViewDelegate, UITableVie
         
         var text : String {
             if indexPath.section == 0 {
-                return habitName[indexPath.row]
+                return viewModel.getHabitName()
             }
             else if indexPath.section  == 1 {
-                return checkList[indexPath.row]
+                return viewModel.checklist(at: indexPath.row)
             }
             else if indexPath.section == 2 {
-                return todoInFiveMins[indexPath.row]
+                return viewModel.todoInFiveMins(at: indexPath.row)
             }
             else if indexPath.section == 3 {
                 return "타이머시작"

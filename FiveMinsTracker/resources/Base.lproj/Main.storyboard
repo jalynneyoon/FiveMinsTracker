@@ -453,10 +453,10 @@
             </objects>
             <point key="canvasLocation" x="2944.9275362318845" y="-158.03571428571428"/>
         </scene>
-        <!--EditHabitViewController-->
+        <!--ShowDetailViewController-->
         <scene sceneID="MSk-RC-GdW">
             <objects>
-                <viewController title="EditHabitViewController" id="BUK-eM-d9y" customClass="EditHabitViewController" customModule="FiveMinsTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="EditHabitViewController" id="BUK-eM-d9y" userLabel="ShowDetailViewController" customClass="ShowDetailViewController" customModule="FiveMinsTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NxC-BL-Idv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -487,10 +487,17 @@
                     <navigationItem key="navigationItem" id="oBQ-q1-FZo"/>
                     <connections>
                         <outlet property="tableView" destination="yDe-xT-gMe" id="YhL-kN-hhG"/>
+                        <outlet property="viewModel" destination="Hve-zD-jmd" id="XXg-Rl-bDy"/>
                         <segue destination="LJ4-JP-gR3" kind="show" identifier="TimerSegue" id="Hzk-7r-MQc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUs-te-hzM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Hve-zD-jmd" userLabel="ShowDetailViewModel" customClass="ShowDetailViewModel" customModule="FiveMinsTracker" customModuleProvider="target">
+                    <connections>
+                        <outlet property="repository" destination="RPI-xI-ugO" id="EzL-RK-2G3"/>
+                    </connections>
+                </customObject>
+                <customObject id="RPI-xI-ugO" userLabel="FiveMinsRepository" customClass="FiveMinsRepository" customModule="FiveMinsTracker" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="4658" y="-1"/>
         </scene>
