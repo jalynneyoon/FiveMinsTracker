@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="STg-mm-Ewn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tnf-Iy-3ac">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -236,9 +236,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="8h4-JX-4wH" id="lin-q0-my6"/>
+                        <outlet property="viewModel" destination="HLr-HP-ZTG" id="6Ye-GA-sZV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0da-eV-RGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="HLr-HP-ZTG" userLabel="ManageHabitViewModel" customClass="ManageHabitViewModel" customModule="FiveMinsTracker" customModuleProvider="target">
+                    <connections>
+                        <outlet property="repository" destination="niE-7P-VVu" id="oCc-sn-7Dk"/>
+                    </connections>
+                </customObject>
+                <customObject id="niE-7P-VVu" userLabel="FiveMinsRepository" customClass="FiveMinsRepository" customModule="FiveMinsTracker" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="3855.0724637681164" y="-158.03571428571428"/>
         </scene>

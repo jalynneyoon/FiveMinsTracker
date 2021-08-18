@@ -9,14 +9,13 @@ import UIKit
 
 class ManageHabitViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var viewModel : ManageHabitViewModel!
     @IBOutlet weak var tableView : UITableView!
 
-    let dummy: [String] = ["수학문제풀기", "아침조깅하기", "독서"]
-
-    // tableView
     
+    // tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummy.count
+        return viewModel.countHabits()
         
     }
     
@@ -27,7 +26,8 @@ class ManageHabitViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "habitCell", for: indexPath) as! HabitTableViewCell
         
-        let data = self.dummy[indexPath.row]
+        let data = viewModel.showHabit(at: indexPath.row)
+        
         cell.cellView.layer.cornerRadius = 10
         cell.habitNameLabel?.text = data
     
@@ -54,11 +54,12 @@ class ManageHabitViewController: UIViewController, UITableViewDelegate, UITableV
     
     // MARK: - Navigation
 
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+     */
     
-
 }
